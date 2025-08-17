@@ -9,6 +9,7 @@ const authRouter=require('./routes/authRouter');
 const userRouter=require('./routes/userRouter');
 const resturantRouter=require('./routes/resturantRouter');
 const categoryRouter=require('./routes/categoryRouter');
+const foodRouter=require('./routes/foodRouter');
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use('/api/v1/auth',authRouter);
 app.use('/api/v1/user',userRouter);
 app.use('/api/v1/resturant',resturantRouter);
 app.use('/api/v1/category',categoryRouter);
+app.use('/api/v1/food',foodRouter);
 
 app.get('/',(req,res)=>{
     return res.status(200).send("<h1>welcom</h1>");

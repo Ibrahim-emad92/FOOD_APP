@@ -7,7 +7,8 @@ const {connectDB}=require('./config/db');
 const testRouter=require('./routes/testRouter');
 const authRouter=require('./routes/authRouter');
 const userRouter=require('./routes/userRouter');
-const resturantRouter=require('./routes/resturantRouter')
+const resturantRouter=require('./routes/resturantRouter');
+const categoryRouter=require('./routes/categoryRouter');
 
 dotenv.config();
 
@@ -25,6 +26,8 @@ app.use('/api/v1/test',testRouter);
 app.use('/api/v1/auth',authRouter);
 app.use('/api/v1/user',userRouter);
 app.use('/api/v1/resturant',resturantRouter);
+app.use('/api/v1/category',categoryRouter);
+
 app.get('/',(req,res)=>{
     return res.status(200).send("<h1>welcom</h1>");
 })
